@@ -1,8 +1,8 @@
 #include <stdio.h>
 
 int is_composite(int n) {
-    if (n <= 3) return 0;  // 2 and 3 are prime
-    if (n % 2 == 0) return 1;  // all even numbers > 2 are composite
+    if (n <= 3) return 0;
+    if (n % 2 == 0) return 1;
     
     for (int i = 3; i * i <= n; i += 2) {
         if (n % i == 0) return 1;
