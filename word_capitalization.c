@@ -6,7 +6,6 @@ int main() {
     char word[1001];
     scanf("%s", word);
     
-    // Capitalize the first letter if it's lowercase
     if (word[0] >= 'a' && word[0] <= 'z') {
         word[0] = word[0] - 'a' + 'A';
     }
