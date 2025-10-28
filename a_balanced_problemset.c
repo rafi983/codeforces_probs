@@ -12,7 +12,7 @@ int main(void) {
 			return 0;
 		}
 
-		long long limit = x / n; /* g cannot exceed this or sum would drop below n */
+		long long limit = x / n;
 		long long best = 1;
 
 		for (long long i = 1; i * i <= x; ++i) {

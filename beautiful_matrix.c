@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include <stdlib.h>  // for abs()
+#include <stdlib.h>
 
 int main() {
     int matrix[5][5];
@@ -14,8 +14,8 @@ int main() {
             }
         }
     }
-    
-    
+
+
     printf("%d\n", abs(row_1 - 2) + abs(col_1 - 2));
     
     return 0;

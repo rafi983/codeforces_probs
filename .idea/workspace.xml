@@ -18,15 +18,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="b1e7d376-32ce-4e97-ba59-ca2fa51c86ea" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/codeforces_problems.iml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copilot.data.migration.agent.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copilot.data.migration.ask.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copilot.data.migration.ask2agent.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/copilot.data.migration.edit.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/editor.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/a_balanced_problemset.c" beforeDir="false" afterPath="$PROJECT_DIR$/a_balanced_problemset.c" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/beautiful_matrix.c" beforeDir="false" afterPath="$PROJECT_DIR$/beautiful_matrix.c" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -89,7 +83,8 @@
       <workItem from="1761474888347" duration="22000" />
       <workItem from="1761480558916" duration="1261000" />
       <workItem from="1761649607074" duration="30000" />
-      <workItem from="1761651586964" duration="1762000" />
+      <workItem from="1761651586964" duration="2183000" />
+      <workItem from="1761661894753" duration="14000" />
     </task>
     <servers />
   </component>
