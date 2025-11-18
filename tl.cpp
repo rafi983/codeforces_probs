@@ -1,20 +1,25 @@
-#include <stdio.h>
+#include <iostream>
+#include <algorithm>
+using namespace std;
 
-int main(void) {
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+
 	int n, m;
-	if (scanf("%d %d", &n, &m) != 2) return 0;
+	cin >> n >> m;
 
 	int a[105], b[105];
 	int max_a = 0, min_a = 101;
 	for (int i = 0; i < n; ++i) {
-		scanf("%d", &a[i]);
+		cin >> a[i];
 		if (a[i] > max_a) max_a = a[i];
 		if (a[i] < min_a) min_a = a[i];
 	}
 
 	int min_b = 101;
 	for (int i = 0; i < m; ++i) {
-		scanf("%d", &b[i]);
+		cin >> b[i];
 		if (b[i] < min_b) min_b = b[i];
 	}
 
@@ -22,10 +27,11 @@ int main(void) {
 	if (2 * min_a > v) v = 2 * min_a;
 
 	if (v < min_b) {
-		printf("%d\n", v);
+		cout << v << endl;
 	} else {
-		printf("-1\n");
+		cout << -1 << endl;
 	}
 
 	return 0;
 }
+

@@ -1,20 +1,23 @@
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-
+#include <iostream>
+#include <vector>
+#include <cstring>
+using namespace std;
 
 typedef long long ll;
 
-typedef struct { int to; int next; } Edge;
+struct Edge {
+    int to;
+    int next;
+};
 
-static int *head = NULL;
-static Edge *edges = NULL;
+static int *head = nullptr;
+static Edge *edges = nullptr;
 static int edge_cnt = 0;
 
-static int *parent_arr = NULL;
-static int *sub = NULL;
-static int *stack_arr = NULL;
-static int *order = NULL;
+static int *parent_arr = nullptr;
+static int *sub = nullptr;
+static int *stack_arr = nullptr;
+static int *order = nullptr;
 
 static void add_edge(int u, int v) {
     edges[edge_cnt].to = v;
@@ -22,31 +25,31 @@ static void add_edge(int u, int v) {
     head[u] = edge_cnt++;
 }
 
-int main(void) {
+int main() {
+    ios_base::sync_with_stdio(false);
+    cin.tie(NULL);
+
     int t;
-    if (scanf("%d", &t) != 1) return 0;
+    cin >> t;
+
     while (t--) {
         int n, k;
-        if (scanf("%d %d", &n, &k) != 2) return 0;
+        cin >> n >> k;
 
         int m2 = 2 * (n - 1);
-        head = (int*)malloc((n + 1) * sizeof(int));
-        edges = (Edge*)malloc((m2 + 5) * sizeof(Edge));
-        parent_arr = (int*)malloc((n + 1) * sizeof(int));
-        sub = (int*)malloc((n + 1) * sizeof(int));
-        stack_arr = (int*)malloc((n + 5) * sizeof(int));
-        order = (int*)malloc((n + 5) * sizeof(int));
-        if (!head || !edges || !parent_arr || !sub || !stack_arr || !order) {
-            fprintf(stderr, "Memory allocation failed\n");
-            return 0;
-        }
+        head = new int[n + 1];
+        edges = new Edge[m2 + 5];
+        parent_arr = new int[n + 1];
+        sub = new int[n + 1];
+        stack_arr = new int[n + 5];
+        order = new int[n + 5];
 
         for (int i = 1; i <= n; ++i) head[i] = -1;
         edge_cnt = 0;
 
         for (int i = 0; i < n - 1; ++i) {
             int u, v;
-            scanf("%d %d", &u, &v);
+            cin >> u >> v;
             add_edge(u, v);
             add_edge(v, u);
         }
@@ -96,14 +99,14 @@ int main(void) {
             ans += cnt_v;
         }
 
-        printf("%lld\n", ans);
+        cout << ans << endl;
 
-        free(head); head = NULL;
-        free(edges); edges = NULL;
-        free(parent_arr); parent_arr = NULL;
-        free(sub); sub = NULL;
-        free(stack_arr); stack_arr = NULL;
-        free(order); order = NULL;
+        delete[] head; head = nullptr;
+        delete[] edges; edges = nullptr;
+        delete[] parent_arr; parent_arr = nullptr;
+        delete[] sub; sub = nullptr;
+        delete[] stack_arr; stack_arr = nullptr;
+        delete[] order; order = nullptr;
     }
 
     return 0;

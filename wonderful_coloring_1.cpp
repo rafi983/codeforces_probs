@@ -1,20 +1,25 @@
-#include <stdio.h>
-#include <string.h>
+#include <iostream>
+#include <string>
+using namespace std;
 
-int main(void) {
+int main() {
+	ios_base::sync_with_stdio(false);
+	cin.tie(NULL);
+
 	int t;
-	if (scanf("%d", &t) != 1) return 0;
+	cin >> t;
+
 	while (t--) {
-		char s[55];
-		if (scanf("%54s", s) != 1) return 0;
+		string s;
+		cin >> s;
 
 		int freq[26] = {0};
-		for (int i = 0; s[i]; ++i) {
+		for (int i = 0; i < s.length(); ++i) {
 			int idx = s[i] - 'a';
 			if (idx >= 0 && idx < 26) freq[idx]++;
 		}
 
-		int pairs = 0;   
+		int pairs = 0;
 		int singles = 0;
 		for (int i = 0; i < 26; ++i) {
 			if (freq[i] >= 2) pairs++;
@@ -22,7 +27,9 @@ int main(void) {
 		}
 
 		int k = pairs + singles / 2;
-		printf("%d\n", k);
+		cout << k << endl;
 	}
+
 	return 0;
 }
+
